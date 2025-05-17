@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../..dist/book-review/book-review.css">
+    <link rel="stylesheet" href="../../dist/bookReview/bookReview.css">
     <title>Book review</title>
 </head>
 <body>
@@ -11,8 +11,8 @@
         <h1 class="title">Pregled Knjiga</h1>
         <ul class="nav-links">
             <li><a href="contact/contact.html">Kontakt</a></li>
-            <li><a href="my-books/myBooks.html">Moje Knjige</a></li>
-            <li><a href="book-review/bookReview.html">Pregled Knjiga</a></li>
+            <li><a href="myBooks/myBooks.html">Moje Knjige</a></li>
+            <li><a href="bookReview/bookReview.html">Pregled Knjiga</a></li>
         </ul>
     </nav>
     <div class="containerOne">
@@ -28,5 +28,24 @@
             </tbody>
         </table>
     </div>
+
+    <form id="forma">
+
+        <label for="naziv">Naziv:</label>
+        <input type="text" id="naziv" name="naziv" required>
+
+        <label for="id">ID:</label>
+        <input type="number" id="id" name="id" required>
+
+        <label for="tip">Tip:</label>
+        <input type="text" id="tip" name="tip" required>
+
+        <label for="slika">Slika:</label>
+        <input type="text" id="slika" name="slika">
+        
+        <button type="button" id="submitBtn">Dodaj</button>
+    </form>
+
+    <script src="bookReview.js"></script>
 </body>
 </html>
