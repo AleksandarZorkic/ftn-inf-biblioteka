@@ -1,0 +1,12 @@
+@import '../styles/global';
+
+table {
+    margin: 30px;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+    th, td {
+        padding: 10px;
+        border: 1px solid black;
+    }
+}
