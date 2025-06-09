@@ -86,4 +86,35 @@ function deleteBook(i) {
     createBooksRow(knjige)
 }
 
+function initializeAddBooks() {
+    let subbmitBtn = document.querySelector("#submitBtn")
+
+    subbmitBtn.addEventListener('click', function(){
+        const forma = document.querySelector("#forma")
+        const formData = new FormData(forma)
+        const naziv = formData.get("naziv")
+        const tip = tip.get("opis")
+        const slika = slika.get("slika")
+
+        const id = calculateMaxId()
+
+        let novaKnjiga = new Knjige(id, naziv, tip, slika)
+        knjige.push(novaKnjiga)
+
+        localStorage.setItem('knjige', JSON.stringify(knjige))
+        createBooksRow(knjige)
+    })
+}
+
+function calculateMaxId() {
+    let maxId = 0
+    for (let i = 0; i < knjige.length; i++) {
+        if (knjige[i].id > maxId) {
+        maxId = knjige[i].id
+        }
+    }
+    return maxId + 1        
+}
+
+
 document.addEventListener('DOMContentLoaded', initializeBooks)
